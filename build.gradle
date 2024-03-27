@@ -26,14 +26,26 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'com.opencsv:opencsv:5.9'
-	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.3.0-rc1'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5-jakarta:2.17.0'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.junit.platform:junit-platform-launcher:1.10.1'
 	runtimeOnly 'com.h2database:h2'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+bootJar {
+	archiveFileName = 'yasp-test.jar'
+}
+
+task buildDocker(type: Exec) {
+	workingDir project.projectDir
+	commandLine 'docker', 'build', '-t', 'yasp-test', '.'
+}
+
+buildDocker.dependsOn bootJar

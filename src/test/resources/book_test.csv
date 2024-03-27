@@ -1,0 +1,6 @@
+,isbn,title,series_title,series_release_number,authors,publisher,language,description,num_pages,format,genres,publication_date,rating_score,num_ratings,num_reviews,current_readers,want_to_read,price,url
+0,12345,Title1,SeriesTitle1,SeriesRelease1,Andy,Publisher1,English,Description1,100,Format1,Genre1,"January 1, 2010",3.95,13307.0,339.0,181.0,3961.0,11.99,https://www.goodreads.com/book/show/title1
+1,12345,Title2,SeriesTitle2,SeriesRelease2,Maria,Publisher2,English,Description2,101,Format2,Genre2,"January 1, 2011",3.95,13310.0,341.0,182.0,3962.0,12.99,https://www.goodreads.com/book/show/title2
+2,12345,Title3,SeriesTitle3,SeriesRelease3,Stanislav,Publisher3,English,Description3,102,Format3,Genre3,"January 1, 2012",3.95,13311.0,342.0,183.0,3963.0,13.99,https://www.goodreads.com/book/show/title3
+3,12345,Title4,SeriesTitle4,SeriesRelease4,Michael,Publisher4,English,Description4,103,Format4,Genre4,"January 3, 2010",3.95,13312.0,343.0,184.0,3964.0,14.99,https://www.goodreads.com/book/show/title4
+4,12345,Title10,SeriesTitle10,SeriesRelease10,Alexander,Publisher10,English,Description10,pages 109,Format10,Genre10,"Published January 1, 2010",3.95,13318.0,351.0,190.0,3970.0,20.99,https://www.goodreads.com/book/show/title10

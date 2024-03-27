@@ -24,10 +24,10 @@ public class BookController {
     private final BookService service;
 
     @GetMapping
-    public List<Book> getTopTenBooks(@Range(min = 1980, max = 2023) @RequestParam(required = false) Integer year,
-                                    @RequestParam @StringEnumeration(value = {"title", "authors", "numPages", "publicationDate", "ratingScore", "numRatings"})
+    public List<Book> getTopTenBooks(@Range(min = 1980, max = 2023) @RequestParam(name = "year", required = false) Integer year,
+                                    @RequestParam(name = "column") @StringEnumeration(value = {"title", "authors", "numPages", "publicationDate", "ratingScore", "numRatings"})
                                     String column,
-                                    @RequestParam @StringEnumeration(value = {"ASC", "DESC"}) String sort) {
+                                    @RequestParam(name = "sort") @StringEnumeration(value = {"ASC", "DESC"}) String sort) {
         return service.getTopTenBooks(year, column, sort);
     }
 }
